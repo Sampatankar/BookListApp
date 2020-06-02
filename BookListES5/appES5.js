@@ -59,6 +59,9 @@ UI.prototype.clearFields = function(){
   document.getElementById('isbn').value = '';
 }
 
+//Local Storage:
+//LOOK AT MOVING OVER A PROTOTYPE VS A STATIC!
+
 //Event Listeners:
 document.getElementById('book-form').addEventListener('submit', function(e){
   // Get form values:
