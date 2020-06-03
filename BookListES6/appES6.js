@@ -26,6 +26,7 @@ class UI {
 
   //Show Alert class:
   showAlert(message, className) {
+    //Create the div:
     const div = document.createElement('div');
     // Add classes:
     div.className = `alert ${className}`;
@@ -114,8 +115,8 @@ document.addEventListener('DOMContentLoaded', Store.displayBooks);
 document.getElementById('book-form').addEventListener('submit', function (e) {
   // Get form values:
   const title = document.getElementById('title').value,
-    author = document.getElementById('author').value,
-    isbn = document.getElementById('isbn').value
+        author = document.getElementById('author').value,
+        isbn = document.getElementById('isbn').value
 
   //Instantiate a new book:
   const book = new Book(title, author, isbn);
@@ -153,7 +154,7 @@ document.getElementById('book-list').addEventListener('click', function (e) {
   ui.deleteBook(e.target);
 
   //Remove from LS:
-    Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
 
   //show an alert message on delete:
   ui.showAlert('Book Removed!', 'success');
